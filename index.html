@@ -6,30 +6,81 @@
     <title>PAGINA HTML 01</title>
     <meta name="description" content="Página de ejemplo con navegación y secciones">
     <meta name="author" content="LOREM COMPANY">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-local.css">
+    <style>
+        #reloj {
+          font-size: 2em;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#historia">Nuestra historia</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="pages/intranet.html">Intranet</a></li>
-                <li><a href="https://www.biobiochile.cl" target="_blank" rel="noopener noreferrer">Noticias</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+                <nav>
+                        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" data-bs-target="#inicio" type="button" role="tab" aria-selected="true">Home</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" data-bs-target="#productos" type="button" role="tab" aria-selected="false">Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contacto" type="button" role="tab" aria-selected="false">Contact</button>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="pages/intranet.html">Intranet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/news.html">Noticias</a></li>
+                        </ul>
+                </nav>
+        </header>
 
     <main>
+        <div id="reloj">--:--:--</div>
+        <script>
+            function actualizarReloj() {
+                const ahora = new Date();
+                const horas = String(ahora.getHours()).padStart(2, '0');
+                const minutos = String(ahora.getMinutes()).padStart(2, '0');
+                const segundos = String(ahora.getSeconds()).padStart(2, '0');
+                document.getElementById('reloj').textContent = `${horas}:${minutos}:${segundos}`;
+            }
+            setInterval(actualizarReloj, 1000);
+            actualizarReloj();
+        </script>
         <section id="inicio">
             <h1>LOREM COMPANY</h1>
             <p>Lorem ipsum dolor sit amet.</p>
         </section>
 
         <section id="productos">
-            <h2>Productos Destacados</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2>RESUMEN</h2>
+            <div class="card gothic">
+                <p class="gothic-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias delectus quod, accusantium accusamus eaque consequatur ut qui possimus quis doloribus ab excepturi. Voluptatum, ex magni quae maiores ut commodi officiis.
+                Corrupti dolor autem quia quas deleniti animi nisi iusto, voluptates provident voluptatum excepturi minus ipsum est accusantium architecto facere reiciendis, maiores aliquid molestiae sit! Pariatur dolores et ab suscipit commodi!
+                Adipisci eligendi ipsa autem exercitationem pariatur odio corporis, deleniti illo atque quod natus, minus voluptatum. Non, cumque ratione quam repudiandae ex maxime. Maiores mollitia ullam totam ipsam illum sit earum?
+                Eos dolores et voluptates, quia porro sit amet ducimus asperiores sint ad quis cumque mollitia totam dolore voluptatibus voluptate temporibus fugit possimus illo at. Maxime eum dolore possimus aperiam aliquam!
+                Accusamus porro voluptates error dolore nobis quibusdam maxime consequatur saepe quidem commodi harum, ab incidunt eius alias aliquid ipsam voluptatem molestiae distinctio itaque natus minima non sapiente? Cumque, corporis aperiam.
+                Expedita debitis doloremque odit eligendi quod repellat placeat perspiciatis molestias ipsa accusantium sequi, eveniet fugit velit nihil ab culpa accusamus amet fuga, exercitationem officia aperiam corrupti cupiditate asperiores. Eligendi, sed?
+                Debitis omnis, inventore vitae voluptates expedita velit pariatur modi. Praesentium tempore odio saepe est laboriosam cum nesciunt in illo eos delectus debitis reprehenderit quae voluptas blanditiis, deleniti repudiandae a ex!
+                Temporibus, nisi aliquam reiciendis pariatur aliquid a. Voluptates totam eveniet consequuntur aperiam eaque eos, praesentium mollitia magnam. Quisquam vitae incidunt deleniti libero, eius sequi commodi officia obcaecati, ad odio quidem!
+                Natus quis consequuntur saepe sit, consequatur laborum esse eos voluptatibus iste atque praesentium necessitatibus consectetur asperiores tenetur rerum alias mollitia non temporibus ducimus at sed nulla odit. Doloremque, placeat nemo.
+                Voluptatum nam ratione itaque ipsam aspernatur fugiat impedit repellendus modi natus perspiciatis ut deleniti non sunt distinctio provident ipsa a quisquam, molestias debitis nesciunt reiciendis, error illo. Necessitatibus, odit incidunt.
+                Ipsa est iure tenetur quisquam magni repellendus, nostrum nesciunt consequatur dolores suscipit asperiores optio fuga labore, facilis ex? Necessitatibus, esse consequatur doloremque rem temporibus accusantium cupiditate beatae architecto quae reprehenderit!
+                Sapiente, fuga? Ut, at incidunt? Porro rem deserunt sit modi cum quaerat reprehenderit assumenda, nostrum dignissimos quis eaque consequuntur dolores et iste commodi quod voluptatem laborum corrupti voluptatum autem aperiam!
+                Magni tempora nulla maxime libero nemo sapiente non, eligendi laborum hic dolor expedita ea cumque quos facere quo culpa eum dolorem voluptatum atque, inventore harum dicta natus! Reiciendis, odit possimus.
+                Atque quam voluptas ex nobis hic qui soluta, accusantium fugit, minima, asperiores consequatur? Excepturi iste eaque pariatur. Facilis quod voluptatibus minima dolorem optio, eos explicabo at iure. Vero, libero praesentium.
+                Id assumenda maxime eligendi voluptatum quae dicta, est voluptatibus totam laborum quia possimus amet illum minus iusto natus debitis et ut distinctio rem nesciunt optio laboriosam, sed nisi corporis? Obcaecati!
+                Voluptate saepe modi consequuntur, explicabo cumque, harum dolore neque repellat debitis vitae accusamus! Aut expedita debitis repellendus dicta quae. Nihil itaque libero excepturi non quis blanditiis unde doloremque velit culpa.
+                Eaque, ipsa nam debitis voluptate ex et cumque nemo temporibus soluta pariatur, aperiam corrupti vel porro iste expedita fugit, cum obcaecati velit enim! Tenetur nostrum corrupti ex ipsam odit dolor?
+                Cumque dicta numquam laudantium, molestias animi, culpa, quaerat iure eligendi reprehenderit harum dolorum ad repellat placeat tempora ex at quam nemo reiciendis sed impedit quidem expedita? Aut explicabo culpa dolore.
+                Quaerat, cumque omnis? Voluptatem quo facere aut neque eveniet quibusdam nisi beatae magnam inventore ipsa ex iste, molestiae at. Eos eveniet vero quia, recusandae animi cum possimus delectus est amet?
+                Natus quibusdam blanditiis, pariatur impedit quam quos modi nesciunt inventore ullam illo molestiae officiis reiciendis ducimus facere necessitatibus repellat veniam, quas at! Necessitatibus ratione officiis quibusdam consequuntur, blanditiis eaque maiores.</p>
+                
+            </div>
         </section>
 
         <section id="historia">
@@ -91,5 +142,12 @@
             </ul>
         </section>
     </main>
+    <footer>
+        <div style="max-width:1000px;margin:24px auto;padding:0 16px;color:var(--color-muted);font-size:14px"> 
+            <p>&copy; 2026 LOREM COMPANY</p>
+            <p>1ra versión.</p>
+        </div>
+    </footer>
+    <script src="vendor/bootstrap/js/bootstrap-local.js"></script>
 </body>
 </html>

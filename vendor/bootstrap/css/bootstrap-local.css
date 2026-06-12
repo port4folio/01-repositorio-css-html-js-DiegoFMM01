@@ -1,0 +1,20 @@
+/* Bootstrap-local (minimal): solo estilos necesarios para nav-pills y utilidades usadas */
+:root{--bs-white:#ffffff;--bs-primary:var(--color-accent)}
+.nav{display:flex;gap:8px;list-style:none;padding:6px;margin:0;align-items:center}
+.nav-pills .nav-link{border-radius:50rem;padding:8px 12px;border:none;cursor:pointer;background:transparent;color:var(--bs-white);font-weight:600}
+.nav-fill{width:100%}
+.nav-fill .nav-item{flex:1;text-align:center}
+.nav-item{display:inline-block}
+.nav-link.active{background:var(--bs-white);color:var(--color-text);box-shadow:0 1px 3px rgba(2,6,23,0.06)}
+.bg-primary{background:var(--bs-primary)}
+.rounded-5{border-radius:12px}
+.shadow-sm{box-shadow:0 1px 3px rgba(2,6,23,0.06)}
+.small{font-size:0.875rem}
+.p-1{padding:6px}
+.gap-2{gap:8px}
+
+/* Focus visible for accessibility */
+.nav-link:focus{outline:3px solid rgba(14,165,164,0.18);outline-offset:2px}
+
+/* utility hidden (used by tab JS) */
+.d-none{display:none !important}
